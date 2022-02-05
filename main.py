@@ -18,7 +18,7 @@ def main():
     service=Create_Service(CLIENT_SECRET_FILE,API_NAME,API_VERSION,SCOPES)
 
 
-    folder_id="18C4heZLU1LbUTBuY-cxwoACVIJ7xx_CP"
+    folder_id=""
     pic_path=askopenfilename()
     name=input("Enter Owner Name: ")
     roll_no=input("Enter Owner Roll Number: ")
@@ -64,7 +64,7 @@ def main():
     df.to_csv("Details.csv",index=None)
 
 
-    csv_id="18C4heZLU1LbUTBuY-cxwoACVIJ7xx_Cs"
+    csv_id=""
     csv_media=MediaFileUpload("Details.csv",mimetype="text/csv")
     service.files().update(
         fileId=csv_id,
